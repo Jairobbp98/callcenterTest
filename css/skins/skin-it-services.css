@@ -1,3 +1,11 @@
+* {
+	scroll-behavior: smooth;
+}
+
+div.body{
+	transition: 0.5s ease all;
+}
+
 ::-moz-selection {
 	color: #FFF;
 	background: #e67e22;
@@ -259,7 +267,7 @@ html .svg-stroke-color-light svg polygon {
 
 html .bg-color-primary,
 html .bg-primary {
-	background-color: #000 !important;
+	background-color: #e67e22 !important;
 }
 
 html .bg-color-hover-primary:hover,
@@ -6334,4 +6342,91 @@ ul.comments .comment-block,
 .custom-pagination-style-1 .page-item:hover .page-link {
 	border-color: #e67e22;
 	background-color: #e67e22 !important;
+}
+
+/* Scroll-the-top */
+
+.scroll-the-top{
+	position: fixed;
+    z-index: 2;
+    bottom: 1%;
+    right: 1%;
+	background-color: gold;
+	border: 0;
+    border-style: none;
+    border-radius: 25px;
+	outline: 0;
+	cursor: pointer;
+    transition: 
+        background-color 0.3s ease-out,
+        color 0.3s ease-out,
+        visibility ease-out 0.5s,
+        opacity ease-out 0.5s;
+}
+
+.scroll-the-top .arrow{
+	width: 2rem;
+	height: 2rem;
+	padding: 1rem;
+	margin: .5rem;
+	background-image: url("../../MyResources/arrowUp-black.svg");
+	background-size: cover;
+}
+
+.scroll-the-top:hover{
+	background-color: #222;
+    color: #222;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Dark Mode */
+.dark-mode{
+    position: fixed;
+    z-index: 2;
+	bottom: 1%;
+	left: 1%;
+    background-color: gold;
+    border-style: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 2rem;
+}
+
+.dark-mode .darksvg{
+	width: 2rem;
+	height: 2rem;
+	padding: 1rem;
+	margin: .5rem;
+	background-image: url("../../MyResources/moon.svg");
+	background-size: cover;
+}
+
+.dark-mode:active{
+    background: black;
+}
+
+/* Clases del dark mode */
+
+body div.body.darkTheme #header .header-body {
+	background: #222;
+}
+
+body div.body.darkTheme .text-color-dark{
+	color: cornsilk !important;
+}
+
+body div.body.darkTheme .text-color-danger{
+	color: cornsilk !important;
+}
+
+body div.body.darkTheme section.section{
+	background-color: #222 !important;
+}
+
+body div.body.darkTheme .bg-color-primary{
+	background-color: #222 !important;
 }
